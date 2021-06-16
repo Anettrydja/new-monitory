@@ -9,7 +9,7 @@ use App\Http\Controllers\deleteUserController;
 use App\Http\Controllers\addNewAppController;
 use App\Http\Controllers\detailedAppViewController;
 use App\Http\Controllers\LaravelCrud;
-use App\Http\Models\userInsert;
+use App\Http\Models\userInsert; // seda pole Models all, kas see oli vajalik ... kustutada v teha Models alla
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,3 +44,7 @@ Route::post('add', [addNewAppController::class, 'add']);
 
 Route::get('/deleteuser', [deleteUserController::class, 'index']);
 Route::get('delete/{id}', [deleteUserController::class, 'destroy']);
+
+Auth::routes();
+
+//Route::get('/home', [\App\Http\Controllers\homeController::class, 'index'])->name('home');
