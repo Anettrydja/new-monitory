@@ -30,6 +30,7 @@ Apache Web Server
 Palun vaadake [Laraveli dokumentatsiooni](https://laravel.com/docs/8.x) installeerimiseks, kui teil veel ei ole seda. Installeerida on võimalik läbi Composer'i või Docker'i, meie kasutasime Composer'it.
 
 Lae alla [XAMPP](https://www.apachefriends.org/download.html).
+
 SQL Create lause: 
 [Monitory_create.txt](https://github.com/Anettrydja/new-monitory/files/6661736/Monitory_create.txt)
 
