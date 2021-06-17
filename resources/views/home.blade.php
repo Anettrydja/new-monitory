@@ -21,31 +21,35 @@
                     <span id="name">Test Testerino</span>
                 </div>
                 <div id="profilebutton">
-                    <button><a href="">Profiil/konto</a></button>
+                    <button id="userpagebutton"><a href="">Profiil/konto</a></button>
                 </div>
-                <button id="logout"><a href=""a>Logi välja</a>
+                <button id="logout"><a href="">Logi välja</a>
             </div>
         </div>
         <div id="container_two">
-            <hr>
-            <table border = "1">
-                <tr>
-                <td>URL</td>
-                <td>PLATVORM</td>
-                <td>TEHNILINE KONTAKT</td>
-                <td></td>
-                </tr>
-                @foreach ($apps as $apps)
-                {{-- <button><a href="/detailed">{{$apps->name}}</a></button>
-                <h1>{{$apps->name}}</h1> --}}
-                <tr>
-                <td>{{ $apps->url }}</td>
-                <td>{{ $apps->platform }}</td>
-                <td>{{ $apps->contact }}</td>
-                <td><button><a href="detailedappview/{{ $apps->id }}">{{ $apps->name }}</a></button></td>
-                </tr>
-                @endforeach
-            </table>
+            <div id="content">
+                <div id="titlecontainer">
+                    <h1 id="title">Üldvaade</h1>
+                </div>
+                <div id="tablecontainer">
+                    <table>
+                        <tr>
+                        <td id="tdtitle">URL</td>
+                        <td id="tdtitle">PLATVORM</td>
+                        <td id="contacttd">TEHNILINE KONTAKT</td>
+                        <td><td>
+                        </tr>
+                        @foreach ($apps as $apps)
+                        <tr>
+                        <td>{{ $apps->url }}</td>
+                        <td>{{ $apps->platform }}</td>
+                        <td>{{ $apps->contact }}</td>
+                        <td id="buttontd"><button id="tablebutton"><a href="detailedappview/{{ $apps->id }}">{{ $apps->name }}</a></button></td>
+                        </tr>
+                        @endforeach
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </body>

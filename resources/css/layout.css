@@ -1,0 +1,329 @@
+body {
+    font-family: Helvetica;
+    background-color: #A3CEF1;
+  }
+
+#logoimage {
+    text-align: center;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    width: 250px;
+    width: 50%
+}
+
+#urlinfo, #platforminfo, #addressinfo, #contactinfo, 
+#serverinfo, #versioninfo, #orderinfo {
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    width: 250px;
+    width: 50%;
+    margin-left: 5%;
+    margin-bottom: 22px;
+}
+
+#inputarea {
+    display: block;
+    width: 50%;
+    margin-right: 30px;
+}
+
+#inputarea2 {
+    margin-left: 30px;
+    display: block;
+    width: 50%;
+    margin-right: 30px;
+}
+
+#changeinput {
+    display: flex;
+}
+
+input[type=text] {
+    margin-right: 15px;
+    min-width: 160px;
+    height: 20px;
+    width: 70%;
+    justify-content: right;
+}
+
+input[type="submit"]:not(#deletebutton) {
+    width: 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    background-color: rgb(115, 216, 115);
+    border-color: rgb(115, 216, 115);
+    border-style: solid;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#container_one {
+    background-color: #FFFFFF;
+    width: 17.5%;
+    height: 700px;
+    border-radius: 50px;
+    margin-left: 10%;
+    min-width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#addbutton, #notificationsbutton, #userbutton, #userpagebutton {
+    width: 80%;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 5px;
+    color: #FFFFFF;
+    background-color: #386FA4;
+    border-color: #386FA4;
+    border-style: solid;
+}
+
+#logout {
+    width: 80%;
+    height: 30px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 10px 0 15px 0;
+    background-color: #386FA4;
+    border-color: #386FA4;
+    border-style: solid;
+}
+
+#save, #changeinfo {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #386FA4;
+    border-color: #386FA4;
+    border-style: solid;
+}
+
+#top {
+    padding: 15px;
+    text-align: center;
+}
+
+#profile {
+    padding: 10px;
+}
+
+#usericon {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+}
+
+#name {
+    vertical-align: middle;
+}
+
+#analysis {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: #D6D30E;
+    border-color: #D6D30E;
+    border-style: solid;
+}
+
+ul {
+    text-align: left;
+}
+
+form:not(#deletebuttonform), ul {
+    margin: 15px 0 15px 5%;
+}
+
+#title {
+    margin-top: 35px;
+    text-align: center;
+}
+
+#commentcontainer {
+    margin-left: 2%;
+    margin-bottom: 40px;
+    width: 50%;
+    height: 100px;
+    display: block;
+}
+
+#commentarea, #commentinput {
+    display: block;
+    resize: none;
+    color: #7a7a7a;
+    word-wrap: break-word;
+    border-style: solid;
+    border-width: thin;
+    font-size: 16px;
+    border-color: #a8a8a8;
+    min-width: 100px;
+    width: 100%;
+    min-height: 20px;
+    height: 80px;
+    padding: 2px 5px 2px 5px;
+    background-color: #ececec;
+}
+
+#comment_analysiscontainer {
+    margin-top: 130px;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#comment_analysiscontainer2 {
+    margin-left: 30px;
+    margin-top: 140px;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#analysis_makechanges {
+    margin-right: 10%;
+    display: block;
+}
+
+#analysis_makechanges2 {
+    margin-bottom: 40px;
+    margin-right: 10%;
+    display: block;
+}
+
+#commentsubmit {
+    width: 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    background-color: rgb(115, 216, 115);
+    border-color: rgb(115, 216, 115);
+    border-style: solid;
+}
+
+#buttoncontainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#deletebutton {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #DD2424;
+    border-color: #DD2424;
+    border-style: solid;
+}
+
+#infocontainer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#infocontainerdisplay {
+    display: flex;
+    margin-top: 50px;
+    text-align: center;
+}
+
+span {
+    display: block;
+}
+
+#bottom {
+    padding: 15px;
+    text-align: center;
+    vertical-align: bottom;
+    margin-top: auto;
+}
+
+#container_two {
+    background-color: #FFFFFF;
+    width: 57.5%;
+    height: 700px;
+    border-radius: 50px;
+    margin-right: 10%;
+    min-width: 250px;
+}
+
+#infoarea {
+    display: block;
+    width: 50%;
+    font-size: 20px;
+    text-align: left;
+}
+
+#testinfo {
+    font-size: 20px;
+    margin-left: 5%;
+    margin-bottom: 22px;
+}
+
+table {
+    border: 1px solid #000000;
+    border-radius: 15px;
+    width: 94%;
+}
+
+td:not(#buttontd, #contacttd), th {
+    word-wrap: break-word;
+    padding-left: 5px;
+    width: 25%;
+    height: 40px;
+}
+
+#contacttd {
+    padding-left: 5px;
+    width: 25%;
+    min-width: 200px;
+    height: 40px;
+}
+
+#tablebutton {
+    min-width: 80px;
+    width: 60%;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 5px;
+    color: #FFFFFF;
+    background-color: #386FA4;
+    border-color: #386FA4;
+    border-style: solid;
+}
+
+#buttontd {
+    text-align: center;
+}
+
+#tablecontainer {
+    margin-left: 30px;
+}
+
+#tdtitle, #contacttd {
+    font-weight: bold;
+}
