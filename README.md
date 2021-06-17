@@ -34,3 +34,6 @@ Lae alla [XAMPP](https://www.apachefriends.org/download.html).
 SQL Create lause: 
 [Monitory_create.txt](https://github.com/Anettrydja/new-monitory/files/6661736/Monitory_create.txt)
 
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Anettrydja/new-monitory/blob/main/LICENSE)
+
