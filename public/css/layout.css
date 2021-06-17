@@ -83,7 +83,7 @@ a {
     text-decoration: none;
 }
 
-#addbutton, #notificationsbutton, #userbutton, #userpagebutton, #homebutton, #detailbutton{
+#addbutton, #notificationsbutton, #userbutton, #userpagebutton {
     width: 80%;
     height: 50px;
     font-size: 16px;
@@ -290,16 +290,18 @@ table {
 }
 
 td:not(#buttontd, #contacttd), th {
-    word-wrap: break-word;
+    word-break: break-all;
     padding-left: 5px;
     width: 25%;
-    height: 40px;
+    min-width: 50px;
+    max-width: 150px;
+    min-height: 40px;
 }
 
 #contacttd {
     padding-left: 5px;
     width: 25%;
-    min-width: 200px;
+    min-width: 90px;
     height: 40px;
 }
 
