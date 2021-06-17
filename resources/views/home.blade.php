@@ -39,7 +39,7 @@
                         <td id="tdtitle">URL</td>
                         <td id="tdtitle">PLATVORM</td>
                         <td id="contacttd">TEHNILINE KONTAKT</td>
-                        <td><td>
+                        <td id="emptytd"></td>
                         </tr>
                         @foreach ($apps as $apps)
                         <tr>
