@@ -60,7 +60,12 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-
+                        <div class="form-group row">
+                            <input type="radio" id="admin" name="type" value="1">
+                            <label for="admin">Admin</label><br>
+                            <input type="radio" id="normal" name="type" value="2">
+                            <label for="admin">Tavakasutaja</label><br>
+                        </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
