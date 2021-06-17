@@ -16,46 +16,55 @@
                 <button id="homebutton"><a href="/home">Avaleht</a></button>
             </div>
             <div id="bottom">
-                <div id="profile">
-                    <img id="usericon" src="<?php echo asset('css/usericon.png')?>"></img>
-                    <span id="name">Test Testerino</span>
-                </div>
-                <div id="profilebutton">
-                    <button><a href="">Profiil/konto</a></button>
-                </div>
+                <img id="usericon" src="<?php echo asset('css/usericon.png')?>"></img>
+                <span id="name">Test Testerino</span>
+                <button id="userpagebutton"><a href="">Profiil/konto</a></button>
                 <button id="logout"><a href=""a>Logi välja</a>
             </div>
         </div>
         <div id="container_two">
-            <div id="top">
+            <div id="content">
+                <table id="detailedtable">
+                    <tr>
+                    <td id="davtd">Platvorm</td>
+                    <td id="davtd">URL</td>
+                    <td id="davtd">Serveri aadress</td>
+                    <td id="davtd">Asukoht serveris</td>
+                    <td id="davtd">Tehniline kontakt</td>
+                    <td id="davtd">Versioon</td>
+                    <td id="davtd">Kommentaarid</td>
+                    <td id="davtd">Tellija</td>
+                    </tr>
+                    @foreach ($app as $app)
+                    <tr>
+                    <h1>{{ $app->name }}</h1>
+                    <td id="davtdinf">{{ $app->platform }}</td>
+                    <td id="davtdinf">{{ $app->url }}</td>
+                    <td id="davtdinf">{{ $app->server_address }}</td>
+                    <td id="davtdinf">{{ $app->server_place }}</td>
+                    <td id="davtdinf">{{ $app->contact }}</td>
+                    <td id="davtdinf">{{ $app->version }}</td>
+                    <td id="davtdinf">{{ $app->comments }}</td>
+                    <td id="davtdinf">{{ $app->client }}</td>
+                    </tr>
+                    @endforeach
+                </table>
+                <div id="comment_analysiscontainer2">
+                    <div id="commentcontainer">
+                        <div id="commentarea">
+                            <td>kommentaarid...</td>
+                        </div>
+                    </div>
+                    <div id="analysis_makechanges2">
+                        <div id="buttoncontainer">
+                            <button id="analysis"><a>Analüüs</a></button>
+                        </div>
+                        <div id="buttoncontainer">
+                            <button id="changeinfo"><a href="/app/changeinfo">Muuda andmeid</a></button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <hr>
-            <table border = "1">
-                <tr>
-                <td>Platvorm</td>
-                <td>URL</td>
-                <td>Serveri aadress</td>
-                <td>Asukoht serveris</td>
-                <td>Tehniline kontakt</td>
-                <td>Versioon</td>
-                <td>Kommentaarid</td>
-                <td>Tellija</td>
-                </tr>
-                @foreach ($app as $app)
-                <tr>
-                <h1>{{ $app->name }}</h1>
-                <td>{{ $app->platform }}</td>
-                <td>{{ $app->url }}</td>
-                <td>{{ $app->server_address }}</td>
-                <td>{{ $app->server_place }}</td>
-                <td>{{ $app->contact }}</td>
-                <td>{{ $app->version }}</td>
-                <td>{{ $app->comments }}</td>
-                <td>{{ $app->client }}</td>
-                </tr>
-                @endforeach
-            </table>
-            <hr>
         </div>
     </div>
 </body>
