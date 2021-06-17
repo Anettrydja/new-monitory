@@ -25,7 +25,7 @@ class addNewAppController extends Controller
             'client'=>'required',
         ]);
 
-        $query = DB::table('app')->insert([
+        $query = DB::table('apps')->insert([
             'name'=>$request->input('name'),
             'platform'=>$request->input('platform'),
             'url'=>$request->input('url'),

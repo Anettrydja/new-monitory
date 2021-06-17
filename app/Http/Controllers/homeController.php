@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class homeController extends Controller
 {
     public function apps(){
-        $apps = DB::select("select * from app");
+        $apps = DB::select("select * from apps");
         return view("home",["apps"=>$apps]);
     }
 }

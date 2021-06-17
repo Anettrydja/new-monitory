@@ -10,12 +10,12 @@ use App\Http\Controllers\Controller;
 class deleteUserController extends Controller
 {
     public function index(){
-        $user = DB::select('select * from user');
-        return view('deleteUser',['user'=>$user]);
+        $users = DB::select('select * from users');
+        return view('deleteUser',['users'=>$users]);
         }
 
         public function destroy($id) {
-        DB::delete('delete from user where id = ?',[$id]);
+        DB::delete('delete from users where id = ?',[$id]);
         // echo ("<body style='background-color:blue'><h1> Kasutaja on kustutatud!</h1> <br> <a href=/users>Mine tagasi</a></body>");
         echo ("<body>
         <style>

@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="{{ asset('css/layout.css') }}" >
 <body>
     <br>
@@ -11,7 +11,7 @@
             <div id="top">
                 <button id="addbutton"><a href="/addnewapp">Lisa rakendus</a></button>
                 <button id="notificationsbutton"><a href="">Teavitused</a></button>
-                <button id="detailbutton"><a href="/detailedappview">Detailne vaade</a></button>
+                {{-- <button id="detailbutton"><a href="/detailedappview">Detailne vaade</a></button> --}}
                 <button id="userbutton"><a href="/users">Kasutajate haldus</a></button>
                 <button id="homebutton"><a href="/home">Avaleht</a></button>
             </div>
@@ -20,16 +20,13 @@
                     <img id="usericon" src="<?php echo asset('css/usericon.png')?>"></img>
                     <span id="name">Test Testerino</span>
                 </div>
-                <div id="profilebutton">
-                    <button><a href="">Profiil/konto</a></button>
-                </div>
+                    <button id="userpagebutton"><a href="">Profiil/konto</a></button>
                 <button id="logout"><a href=""a>Logi välja</a>
             </div>
         </div>
         <div id="container_two">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <hr>
                     @if(Session::get('success'))
                         <div class="alert alert-success">
                             {{ Session::get('success')}}
@@ -44,29 +41,26 @@
     
                         @csrf
                         <div class="form-group">
-                            <label for="">Eesnimi</label>
-                            <input type="text" class="form-control" name="firstname" placeholder="Eesnimi">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Perekonnanimi</label>
-                            <input type="text" class="form-control" name="lastname" placeholder="Perekonnanimi">
+                            <label for="">Nimi</label>
+                            <input type="text" class="form-control" name="name" placeholder="Eesnimi ja perekonnanimi">
                         </div>
                         <div class="form-group">
                             <label for="">E-mail</label>
-                            <input type="text" class="form-control" name="username" placeholder="E-mail">
+                            <input type="text" class="form-control" name="email" placeholder="E-mail">
                         </div>
                         <div class="form-group">
                             <label for="">Parool</label>
                             <input type="text" class="form-control" name="password" placeholder="Parool">
                         </div>
-                        <div class="form-group">
-                            <input type="radio" name="status" id="statusadmininput" value="2" ><label for="statusadmininput">Administraator</label>
-                            <input type="radio" name="status" id="statusreginput" value="1" ><label for="statusreginput">Tavakasutaja</label>
+                        <div class="form-group-type">
+                            <input type="radio" name="type" id="statusadmininput" value="1" ><label for="statusadmininput">Administraator</label>
+                            <input type="radio" name="type" id="statusreginput" value="2" ><label for="statusreginput">Tavakasutaja</label>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block">Loo kasutaja</button>
+                            <button id="createuser" type="submit" class="btn btn-primary btn-block">Loo kasutaja</button>
                         </div>
-                        <button><a href="/users">Mine tagasi</a></button>
+                        <br>
+                        <button id="goback"><a href="/users">Mine tagasi</a></button>
                     </form>
                 </div>
             </div>

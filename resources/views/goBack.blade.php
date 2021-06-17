@@ -11,7 +11,7 @@
             <div id="top">
                 <button id="addbutton"><a href="/addnewapp">Lisa rakendus</a></button>
                 <button id="notificationsbutton"><a href="">Teavitused</a></button>
-                <button id="detailbutton"><a href="/detailedappview">Detailne vaade</a></button>
+                {{-- <button id="detailbutton"><a href="/detailedappview">Detailne vaade</a></button> --}}
                 <button id="userbutton"><a href="/users">Kasutajate haldus</a></button>
                 <button id="homebutton"><a href="/home">Avaleht</a></button>
             </div>

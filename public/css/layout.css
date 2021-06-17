@@ -1,3 +1,4 @@
+  
 body {
     font-family: Helvetica;
     background-color: #A3CEF1;
@@ -7,7 +8,7 @@ body {
     text-align: center;
 }
 
-label {
+label:not(#addlabel) {
     display: block;
     text-align: left;
     font-size: 20px;
@@ -83,7 +84,8 @@ a {
     text-decoration: none;
 }
 
-#addbutton, #notificationsbutton, #userbutton, #userpagebutton, #homebutton, #detailbutton{
+#addbutton, #notificationsbutton, #userbutton, #userpagebutton, 
+#homebutton, #detailbutton, #profilebutton {
     width: 80%;
     height: 50px;
     font-size: 16px;
@@ -194,8 +196,7 @@ form:not(#deletebuttonform), ul {
 
 #comment_analysiscontainer2 {
     margin-left: 30px;
-    margin-top: 140px;
-    margin-bottom: 10%;
+    margin-top: 350px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -264,7 +265,7 @@ span {
 #container_two {
     background-color: #FFFFFF;
     width: 57.5%;
-    height: 700px;
+    min-height: 700px;
     border-radius: 50px;
     margin-right: 10%;
     min-width: 250px;
@@ -289,17 +290,27 @@ table {
     width: 94%;
 }
 
-td:not(#buttontd, #contacttd), th {
-    word-wrap: break-word;
+#usertable {
+    margin-left: 3%;
+    margin-top: 30px;
+    width: 94%;
+}
+
+td:not(#buttontd, #contacttd, #firstnametd, #lastnametd, #usernametd, 
+#usernameinfotd, #firstnameinfotd, #lastnameinfotd, #emailtd), 
+#davtd, #davtdinf, th {
+    word-break: break-all;
     padding-left: 5px;
     width: 25%;
-    height: 40px;
+    min-width: 50px;
+    max-width: 150px;
+    min-height: 40px;
 }
 
 #contacttd {
     padding-left: 5px;
     width: 25%;
-    min-width: 200px;
+    min-width: 90px;
     height: 40px;
 }
 
@@ -326,4 +337,136 @@ td:not(#buttontd, #contacttd), th {
 
 #tdtitle, #contacttd {
     font-weight: bold;
+}
+
+#create, #delete {
+    min-width: 80px;
+    width: 25%;
+    min-width: 150px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 5px;
+    color: #FFFFFF;
+    background-color: #386FA4;
+    border-color: #386FA4;
+    border-style: solid;
+}
+
+#container_two_top {
+    margin: 15px 0px 15px 0px;
+    text-align: center;
+    display: block;
+}
+
+#firstnametd, #lastnametd, #usernametd, #emailtd {
+    font-weight: bold;
+    word-break: break-all;
+    padding-left: 5px;
+    width: 25%;
+    height: 40px;
+}
+
+#usernameinfotd, #firstnameinfotd, #lastnameinfotd, #emailinfotd {
+    word-break: break-all;
+    padding-left: 5px;
+    width: 25%;
+    height: 40px;
+}
+
+#comment {
+    margin-right: 15px;
+    min-width: 160px;
+    height: 60px;
+    width: 70%;
+    justify-content: right;
+    resize: none;
+}
+
+#addlabel {
+    text-align: left;
+    font-size: 20px;
+}
+
+#form-group {
+    margin: 10px 0 10px 0;
+}
+
+#addappbutton {
+    width: 30%;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 5px;
+    color: #FFFFFF;
+    background-color: #386FA4;
+    border-color: #386FA4;
+    border-style: solid;
+}
+
+#gobackbutton {
+    min-width: 120px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 15px 0 15px 3%;
+    background-color: #386FA4;
+    border-color: #386FA4;
+    border-style: solid;
+}
+
+#deleteusertable {
+    margin-left: 3%;
+    margin-top: 30px;
+    width: 94%;
+}
+
+#userdeletebutton {
+    width: 120px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #DD2424;
+    border-color: #DD2424;
+    border-style: solid;
+}
+
+#firstnametd, #lastnametd, #emailtd, #firstnameinfotd, 
+#lastnameinfotd, #emailinfotd, #userdeletebuttontd {
+    word-break: break-all;
+    padding-left: 5px;
+    width: 25%;
+    min-width: 84px;
+    min-height: 40px;
+}
+
+#detailedtable {
+    margin-left: 3%;
+    margin-top: 30px;
+    width: 94%;
+}
+
+#davtd {
+    width: 100px;
+    font-weight: bold;
+}
+#emptytd {
+    text-align: center;
+    font-weight: bold;
+}
+
+#createuser, #goback{
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: #386FA4;
+    border-color: #386FA4;
+    border-style: solid;
+    color: white;
+}
+
+h1{
+    text-align: center;
 }
