@@ -39,6 +39,7 @@ php -r "unlink('composer-setup.php');"
 ```
 Seejärel kui vaja jooksutage järgmised käsud.
 ```
+composer require laravel/installer
 composer require laravel/ui
 ```
 ```
