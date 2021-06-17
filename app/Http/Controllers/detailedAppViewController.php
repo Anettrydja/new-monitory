@@ -8,12 +8,12 @@ use Illuminate\Support\Facades\DB;
 class detailedAppViewController extends Controller
 {
     public function apps(){
-        $app = DB::select("select * from app");
+        $app = DB::select("select * from apps");
         return view("detailedappview",["app"=>$app]);
     }
 
     public function view($id) {
-        $app = DB::select('select * from app where id = ?',[$id]);
+        $app = DB::select('select * from apps where id = ?',[$id]);
         return view("detailedappview",["app"=>$app]);
     }
 

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class userController extends Controller
 {
     public function users(){
-        $users = DB::select("select * from user");
+        $users = DB::select("select * from users");
         return view("users",["users"=>$users]);
     }
 }
