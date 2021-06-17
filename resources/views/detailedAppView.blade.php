@@ -3,21 +3,21 @@
 <body>
     <br>
     <div id="logoimage">
-        <image src="logotest.png" alt="logo" height="100px" width="320px">
+        <image src="<?php echo asset ('css/logotest.png')?>" alt="logo" height="100px" width="320px">
     </div>
     <br>
     <div id="container"> 
         <div id="container_one">
             <div id="top">
-                <button><a href="/addnewuser">Lisa rakendus</a></button>
-                <button><a href="">Teavitused</a></button>
-                <button><a href="/detailedappview">Detailne vaade</a></button>
-                <button><a href="/users">Kasutajate haldus</a></button>
-                <button><a href="/home">Avaleht</a></button>
+                <button id="addbutton"><a href="/addnewapp">Lisa rakendus</a></button>
+                <button id="notificationsbutton"><a href="">Teavitused</a></button>
+                <button id="detailbutton"><a href="/detailedappview">Detailne vaade</a></button>
+                <button id="userbutton"><a href="/users">Kasutajate haldus</a></button>
+                <button id="homebutton"><a href="/home">Avaleht</a></button>
             </div>
             <div id="bottom">
                 <div id="profile">
-                    <img id="usericon" src="usericon.png"></img>
+                    <img id="usericon" src="<?php echo asset('css/usericon.png')?>"></img>
                     <span id="name">Test Testerino</span>
                 </div>
                 <div id="profilebutton">
@@ -32,7 +32,6 @@
             <hr>
             <table border = "1">
                 <tr>
-                <td>Nimi</td>
                 <td>Platvorm</td>
                 <td>URL</td>
                 <td>Serveri aadress</td>
@@ -44,7 +43,7 @@
                 </tr>
                 @foreach ($app as $app)
                 <tr>
-                <td>{{ $app->name }}</td>
+                <h1>{{ $app->name }}</h1>
                 <td>{{ $app->platform }}</td>
                 <td>{{ $app->url }}</td>
                 <td>{{ $app->server_address }}</td>

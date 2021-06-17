@@ -38,9 +38,9 @@ class addNewAppController extends Controller
         ]);
 
         if($query){
-            return back()->with('success', 'Läksid databasei');
+            return back()->with('success', 'Uus rakendus lisatud');
         } else {
-            return back()->with('fail', 'Mingi jama on');
+            return back()->with('fail', 'Tekkis tõrge');
         }
     }
 }

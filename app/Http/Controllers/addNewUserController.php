@@ -28,12 +28,13 @@ class addNewUserController extends Controller
             'username'=>$request->input('username'),
             'password'=>$request->input('password'),
             'status'=>$request->input('status'),
+
         ]);
 
         if($query){
-            return back()->with('success', 'Läksid databasei');
+            return back()->with('success', 'Kõik korras');
         } else {
-            return back()->with('fail', 'Mingi jama on');
+            return back()->with('fail', 'Error');
         }
     }
 }

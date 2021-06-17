@@ -40,7 +40,8 @@ Route::get('/addnewuser', [addNewUserController::class, 'insertform']);
 Route::post('add', [addNewUserController::class, 'add']);
 
 Route::get('/addnewapp', [addNewAppController::class, 'insertform']);
-Route::post('add', [addNewAppController::class, 'add']);
+Route::post('addapp', [addNewAppController::class, 'add']);
 
 Route::get('/deleteuser', [deleteUserController::class, 'index']);
 Route::get('delete/{id}', [deleteUserController::class, 'destroy']);
+

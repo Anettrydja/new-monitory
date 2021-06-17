@@ -3,21 +3,21 @@
 <body>
     <br>
     <div id="logoimage">
-        <image src="logotest.png" alt="logo" height="100px" width="320px">
+        <image src="<?php echo asset ('css/logotest.png')?>" alt="logo" height="100px" width="320px">
     </div>
     <br>
     <div id="container"> 
         <div id="container_one">
             <div id="top">
-                <button><a href="">Lisa rakendus</a></button>
-                <button><a href="">Teavitused</a></button>
-                <button><a href="">Detailne vaade</a></button>
-                <button><a href="/users">Kasutajate haldus</a></button>
-                <button><a href="/home">Avaleht</a></button>
+                <button id="addbutton"><a href="/addnewapp">Lisa rakendus</a></button>
+                <button id="notificationsbutton"><a href="">Teavitused</a></button>
+                <button id="detailbutton"><a href="/detailedappview">Detailne vaade</a></button>
+                <button id="userbutton"><a href="/users">Kasutajate haldus</a></button>
+                <button id="homebutton"><a href="/home">Avaleht</a></button>
             </div>
             <div id="bottom">
                 <div id="profile">
-                    <img id="usericon" src="usericon.png"></img>
+                    <img id="usericon" src="<?php echo asset('css/usericon.png')?>"></img>
                     <span id="name">Test Testerino</span>
                 </div>
                 <div id="profilebutton">
@@ -40,43 +40,52 @@
                             {{ Session::get('fail')}}
                         </div>
                     @endif
-                    <form action="add" method="post">
+                    <form action="addapp" method="post">
     
                         @csrf
                         <div class="form-group">
                             <label for="">Rakenduse nimi</label>
+                            <br>
                             <input type="text" class="form-control" name="name" placeholder="nimi">
                         </div>
                         <div class="form-group">
                             <label for="">Rakenduse platvorm</label>
-                            <input type="text" class="form-control" name="platform" placeholder="platform">
+                            <br>
+                            <input type="text" class="form-control" name="platform" placeholder="platvorm">
                         </div>
                         <div class="form-group">
-                            <label for="">URL</label>
+                            <label for="">Rakenduse URL</label>
+                            <br>
                             <input type="text" class="form-control" name="url" placeholder="url">
                         </div>
                         <div class="form-group">
-                            <label for="">Server address</label>
-                            <input type="text" class="form-control" name="server_address" placeholder="server_address">
+                            <label for="">Serveri aadress</label>
+                            <br>
+                            <input type="text" class="form-control" name="server_address" placeholder="serveri aadress">
                         </div>
                         <div class="form-group">
-                            <label for="">server place</label>
-                            <input type="text" class="form-control" name="server_place" placeholder="serverplace">
+                            <label for="">Serveri asukoht</label>
+                            <br>
+                            <input type="text" class="form-control" name="server_place" placeholder="serveri asukoht">
                         </div>
                         <div class="form-group">
-                            <label for="">contact</label>
-                            <input type="text" class="form-control" name="contact" placeholder="contact">
+                            <label for="">Vastutav isik</label>
+                            <br>
+                            <input type="text" class="form-control" name="contact" placeholder="vastutav isik">
                         </div>
                         <div class="form-group">
-                            <label for="">version</label>
-                            <input type="text" class="form-control" name="version" placeholder="version">
+                            <label for="">Versioon</label>
+                            <br>
+                            <input type="text" class="form-control" name="version" placeholder="versioon">
                         </div>
                         <div class="form-group">
-                            <label for="">client</label>
-                            <input type="text" class="form-control" name="client" placeholder="klient">
+                            <label for="">Tellija</label>
+                            <br>
+                            <input type="text" class="form-control" name="client" placeholder="tellija">
                         </div>
                         <div>
                             <label for="comment">Kommentaarid</label>
+                            <br>
                             <textarea rows="10" class="form-control" cols="80" name="comments" id="comment" placeholder="Kommentaarid....."></textarea>
                         </div>
                         <div class="form-group">

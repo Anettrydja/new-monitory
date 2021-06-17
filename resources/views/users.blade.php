@@ -3,21 +3,21 @@
 <body>
     <br>
     <div id="logoimage">
-        <image src="logotest.png" alt="logo" height="100px" width="320px">
+        <image src="<?php echo asset ('css/logotest.png')?>" alt="logo" height="100px" width="320px">
     </div>
     <br>
     <div id="container"> 
         <div id="container_one">
             <div id="top">
-                <button><a href="">Lisa rakendus</a></button>
-                <button><a href="">Teavitused</a></button>
-                <button><a href="">Detailne vaade</a></button>
-                <button><a href="">Kasutajate haldus</a></button>
-                <button><a href="/home">Avaleht</a></button>
+                <button id="addbutton"><a href="/addnewapp">Lisa rakendus</a></button>
+                <button id="notificationsbutton"><a href="">Teavitused</a></button>
+                <button id="detailbutton"><a href="/detailedappview">Detailne vaade</a></button>
+                <button id="userbutton"><a href="/users">Kasutajate haldus</a></button>
+                <button id="homebutton"><a href="/home">Avaleht</a></button>
             </div>
             <div id="bottom">
                 <div id="profile">
-                    <img id="usericon" src="usericon.png"></img>
+                    <img id="usericon" src="<?php echo asset('css/usericon.png')?>"></img>
                     <span id="name">Test Testerino</span>
                 </div>
                 <div id="profilebutton">
@@ -38,11 +38,11 @@
                 <td>Eesnimi</td>
                 <td>Perekonnanimi</td>
                 </tr>
-                @foreach ($users as $user)
+                @foreach ($users as $users)
                 <tr>
-                <td>{{ $user->username }}</td>
-                <td>{{ $user->firstname }}</td>
-                <td>{{ $user->lastname }}</td>
+                <td>{{ $users->username }}</td>
+                <td>{{ $users->firstname }}</td>
+                <td>{{ $users->lastname }}</td>
                 </tr>
                 @endforeach
             </table>
