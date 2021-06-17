@@ -43,13 +43,11 @@ composer require laravel/installer
 composer require laravel/ui
 ```
 ```
-composer require laravel/sail
-```
-```
 php artisan ui bootstrap
 ```
+Seejärel kopeeri antud käsklus npm install && npm run dev
 ```
-php artisan ui bootstrap --auth
+npm install && npm run dev
 ```
 
 
