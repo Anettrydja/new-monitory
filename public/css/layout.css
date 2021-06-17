@@ -15,7 +15,7 @@ label {
     width: 50%
 }
 
-#urlinfo, #platforminfo, #addressinfo, #contactinfo, 
+#urlinfo, #platforminfo, #addressinfo, #contactinfo,
 #serverinfo, #versioninfo, #orderinfo {
     display: block;
     text-align: left;
@@ -83,7 +83,7 @@ a {
     text-decoration: none;
 }
 
-#addbutton, #notificationsbutton, #userbutton, #userpagebutton, #homebutton, #detailbutton{
+#addbutton, #notificationsbutton, #userbutton, #userpagebutton, #homebutton, #detailbutton, #profilebutton {
     width: 80%;
     height: 50px;
     font-size: 16px;
@@ -289,17 +289,25 @@ table {
     width: 94%;
 }
 
-td:not(#buttontd, #contacttd), th {
-    word-wrap: break-word;
+#usertable {
+    margin-left: 3%;
+    margin-top: 30px;
+    width: 94%;
+}
+
+td:not(#buttontd, #contacttd, #firstnametd, #lastnametd, #usernametd, #usernameinfotd, #firstnameinfotd, #lastnameinfotd), th {
+    word-break: break-all;
     padding-left: 5px;
     width: 25%;
-    height: 40px;
+    min-width: 50px;
+    max-width: 150px;
+    min-height: 40px;
 }
 
 #contacttd {
     padding-left: 5px;
     width: 25%;
-    min-width: 200px;
+    min-width: 90px;
     height: 40px;
 }
 
@@ -326,4 +334,39 @@ td:not(#buttontd, #contacttd), th {
 
 #tdtitle, #contacttd {
     font-weight: bold;
+}
+
+#create, #delete {
+    min-width: 80px;
+    width: 25%;
+    min-width: 150px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 5px;
+    color: #FFFFFF;
+    background-color: #386FA4;
+    border-color: #386FA4;
+    border-style: solid;
+}
+
+#container_two_top {
+    margin: 15px 0px 15px 0px;
+    text-align: center;
+    display: block;
+}
+
+#firstnametd, #lastnametd, #usernametd {
+    font-weight: bold;
+    word-break: break-all;
+    padding-left: 5px;
+    width: 25%;
+    height: 40px;
+}
+
+#usernameinfotd, #firstnameinfotd, #lastnameinfotd {
+    word-break: break-all;
+    padding-left: 5px;
+    width: 25%;
+    height: 40px;
 }

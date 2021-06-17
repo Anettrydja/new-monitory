@@ -6,7 +6,7 @@
         <image src="<?php echo asset ('css/logotest.png')?>" alt="logo" height="100px" width="320px">
     </div>
     <br>
-    <div id="container"> 
+    <div id="container">
         <div id="container_one">
             <div id="top">
                 <button id="addbutton"><a href="/addnewapp">Lisa rakendus</a></button>
@@ -27,26 +27,24 @@
             </div>
         </div>
         <div id="container_two">
-            <div id="top">
+            <div id="container_two_top">
                 <button id="create"><a href="/addnewuser">Lisa uus kasutaja</a></button>
-                <button id="create"><a href="/deleteuser">Kustuta kasutaja</a></button>
+                <button id="delete"><a href="/deleteuser">Kustuta kasutaja</a></button>
             </div>
-            <hr>
-            <table border = "1">
+            <table id="usertable">
                 <tr>
-                <td>Kasutajanimi/E-mail</td>
-                <td>Eesnimi</td>
-                <td>Perekonnanimi</td>
+                <td id="usernametd">Kasutajanimi/E-mail</td>
+                <td id="firstnametd">Eesnimi</td>
+                <td id="lastnametd">Perekonnanimi</td>
                 </tr>
                 @foreach ($users as $users)
                 <tr>
-                <td>{{ $users->username }}</td>
-                <td>{{ $users->firstname }}</td>
-                <td>{{ $users->lastname }}</td>
+                <td id="usernameinfotd">{{ $users->username }}</td>
+                <td id="firstnameinfotd">{{ $users->firstname }}</td>
+                <td id="lastnameinfotd">{{ $users->lastname }}</td>
                 </tr>
                 @endforeach
             </table>
-            <hr>
         </div>
     </div>
 </body>
